@@ -1,28 +1,67 @@
-# FrontLab
+# FrontLab - Component Library Playground
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+FrontLab is a playground for experimenting with modern web component libraries and frameworks. This project is built using Nx to manage a monorepo structure that includes various applications and libraries.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+## Project Overview
 
-## Run tasks
+This workspace demonstrates how to build and integrate web components across different frameworks:
 
-To run tasks with Nx use:
+- **Lion Web Components**: Custom elements built on top of the Lion Web Components library
+- **React Integration**: Showing how to use web components in React applications
+- **Nx Workspace**: Leveraging Nx for managing the monorepo structure
 
-```sh
-npx nx <target> <project-name>
+## Project Goals
+
+This workspace is designed to:
+
+- Explore modern web component libraries and frameworks
+- Build reusable UI components that work across different frameworks
+- Demonstrate integration patterns between web components and React
+- Provide a playground for experimenting with new UI patterns
+
+## Project Structure
+
+```
+front-lab/
+├── apps/                   # Applications
+├── libs/                   # Libraries
+│   └── ui/                 # UI components
+│       └── lion/           # Lion Web Components
+│           └── selectable-button-group/  # Our custom component
+└── react-app/             # React application for demo
 ```
 
-For example:
+## Getting Started
+
+### Running the React Demo
+
+To run the React application that demonstrates both implementations:
 
 ```sh
-npx nx build myproject
+npx nx serve react-app
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+This will start a development server and open the application in your browser.
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Building the Component Library
+
+To build the selectable button group component library:
+
+```sh
+npx nx build ui-lion-selectable-button-group
+```
+
+### Exploring the Demo
+
+The React application demonstrates different component implementations and integration patterns. You can explore:
+
+- Web Components built with Lion and Lit
+- React implementations of similar components
+- Integration between the two approaches
+
+The demo includes a navigation menu to easily switch between different examples.
 
 ## Add new projects
 

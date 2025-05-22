@@ -1,0 +1,31 @@
+{
+  "name": "selectable-button-group",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/lion/selectable-button-group/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "manifestRootsToUpdate": ["dist/{projectRoot}"],
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk"
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "outputPath": "dist/libs/ui/lion/selectable-button-group",
+        "main": "libs/ui/lion/selectable-button-group/src/index.js",
+        "tsConfig": "libs/ui/lion/selectable-button-group/tsconfig.lib.json",
+        "assets": ["libs/ui/lion/selectable-button-group/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
