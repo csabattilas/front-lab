@@ -1,0 +1,28 @@
+<div class="container p-4">
+  <h2 class="text-xl font-bold mb-6">
+    Custom components extended from lion
+  </h2>
+  <div class="mb-6">
+    <h3>locked selection list box</h3>
+    <div>{{ modelValue?.[0]?.selectedValue }}</div>
+    <locked-selection-list-box
+      #listbox
+      answer="option1"
+      (model-value-changed)="handleExclusiveChange($event)"
+      class="locked-listbox theme-primary"
+    >
+      <lion-option value="option1" choiceValue="option1" class="listbox-option">
+        Option 1
+      </lion-option>
+      <lion-option value="option2" choiceValue="option2" class="listbox-option">
+        Option 2
+      </lion-option>
+      <lion-option value="option3" choiceValue="option3" class="listbox-option">
+        Option 3
+      </lion-option>
+      <lion-option value="option4" choiceValue="option4" class="listbox-option">
+        Option 4
+      </lion-option>
+    </locked-selection-list-box>
+  </div>
+</div>

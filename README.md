@@ -1,73 +1,64 @@
-# FrontLab - Component Library Playground
+# FrontLab - Cross-Framework Component Library
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-FrontLab is a playground for experimenting with modern web component libraries and frameworks. This project is built using Nx to manage a monorepo structure that includes various applications and libraries.
+FrontLab is a playground for building and showcasing framework-agnostic web components that work seamlessly across multiple frontend frameworks. This project is built using Nx to manage a monorepo structure that includes various applications and libraries.
 
 ## Project Overview
 
-This workspace demonstrates how to build and integrate web components across different frameworks:
+This workspace demonstrates how to build web components once and use them everywhere:
 
-- **Lion Web Components**: Custom elements built on top of the Lion Web Components library
-- **React Integration**: Showing how to use web components in React applications
+- **Web Components**: Custom elements built with Lit and Lion Web Components
+- **Multi-Framework Support**: Integration with React, Angular, and Vue
+- **Consistent UX**: Same components, same behavior, different frameworks
 - **Nx Workspace**: Leveraging Nx for managing the monorepo structure
 
 ## Project Goals
 
 This workspace is designed to:
 
-- Explore modern web component libraries and frameworks
-- Build reusable UI components that work across different frameworks
-- Demonstrate integration patterns between web components and React
+- Create truly reusable UI components that work across any modern framework
+- Demonstrate integration patterns between web components and popular frameworks
+- Reduce duplication by maintaining a single source of truth for component logic
+- Showcase TypeScript integration with web components
 - Provide a playground for experimenting with new UI patterns
-
-## Project Structure
-
-```
-front-lab/
-├── apps/                   # Applications
-├── libs/                   # Libraries
-│   └── ui/                 # UI components
-│       └── lion/           # Lion Web Components
-│           └── selectable-button-group/  # Our custom component
-└── react-app/             # React application for demo
-```
 
 ## Getting Started
 
-### Running the React Demo
+### Running the Applications
 
-To run the React application that demonstrates both implementations:
+You can run any of the framework-specific applications to see the same components in action:
 
 ```sh
+# Run the React application
 npx nx serve react-app
+
+# Run the Angular application
+npx nx serve angular-app
+
+# Run the Vue application
+npx nx serve vue-app
 ```
 
-This will start a development server and open the application in your browser.
-
-### Building the Component Library
-
-To build the selectable button group component library:
-
-```sh
-npx nx build ui-lion-selectable-button-group
-```
+Each will start a development server and open the application in your browser.
 
 ### Exploring the Demo
 
-The React application demonstrates different component implementations and integration patterns. You can explore:
+All applications demonstrate the same components with identical functionality, but implemented within different framework contexts. You can explore:
 
 - Web Components built with Lion and Lit
-- React implementations of similar components
-- Integration between the two approaches
+- TypeScript integration in each framework
+- Consistent styling across frameworks
+- Framework-specific event handling patterns
 
-The demo includes a navigation menu to easily switch between different examples.
+Each application includes a navigation menu to easily switch between different examples.
 
 ## Add new projects
 
 While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
 
 To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
+
 ```sh
 npx nx add @nx/react
 ```
@@ -123,12 +114,13 @@ Nx Console is an editor extension that enriches your developer experience. It le
 
 Learn more:
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
+- [Learn more about this workspace setup](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 And join the Nx community:
+
 - [Discord](https://go.nx.dev/community)
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
